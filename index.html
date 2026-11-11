@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Food Finder</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="resources.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p>Oregon State University · Corvallis</p>
+      <h1>Campus Food Finder</h1>
+      <p>Find free groceries and meals that fit around your classes.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <p class="notice"><strong>Class prototype.</strong> These listings are fictional. Do not use them to plan a real pickup.</p>
+    <form id="filters">
+      <h2>Find a pickup</h2>
+      <div class="fields">
+        <label>Day <select name="day" id="day"><option value="">Any day</option></select></label>
+        <label>Available from <input name="start" type="time" aria-describedby="time-help"></label>
+        <label>Available until <input name="end" type="time" aria-describedby="time-help"></label>
+        <label>Food type <select name="type"><option value="">Either</option><option value="Groceries">Groceries</option><option value="Ready-to-eat meals">Ready-to-eat meals</option></select></label>
+      </div>
+      <p id="time-help">Times are in Corvallis local time. Choose a day to search by time.</p>
+      <p id="error" role="alert"></p>
+      <button type="submit">Find food</button>
+      <button type="reset">Clear filters</button>
+    </form>
+    <section aria-labelledby="results-title">
+      <h2 id="results-title">Food resources</h2>
+      <p id="status" role="status"></p>
+      <div id="results"></div>
+      <noscript>Enable JavaScript to search the sample listings.</noscript>
+    </section>
+  </main>
+</body>
+</html>
